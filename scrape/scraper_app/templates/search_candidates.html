@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Candidates</title>
+</head>
+<body>
+    <h1>Candidates List</h1>
+    <ul>
+        {% for candidate in candidates %}
+            <li>
+                <strong>Job Title:</strong> {{ candidate.Job_Title }}<br>
+                <strong>Company:</strong> {{ candidate.Company }}<br>
+                <strong>Location:</strong> {{ candidate.Location }}<br>
+                <strong>Salary:</strong> {{ candidate.Salary }}<br>
+                <strong>Employment Type:</strong> {{ candidate.employment_type }}<br>
+                <a href="{% url 'edit_candidate' candidate.id %}">Edit</a> |
+                <a href="{% url 'delete_candidate' candidate.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

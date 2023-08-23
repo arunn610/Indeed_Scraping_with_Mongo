@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Candidate</title>
+</head>
+<body>
+    <h1>Edit Candidate</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="Job_Title">Job Title:</label>
+        <input type="text" id="Job_Title" name="Job_Title" value="{{ candidate.Job_Title }}"><br>
+        <label for="Company">Company:</label>
+        <input type="text" id="Company" name="Company" value="{{ candidate.Company }}"><br>
+        <label for="Location">Location:</label>
+        <input type="text" id="Location" name="Location" value="{{ candidate.Location }}"><br>
+        <label for="Salary">Salary:</label>
+        <input type="text" id="Salary" name="Salary" value="{{ candidate.Salary }}"><br>
+        <label for="employment_type">Employment Type:</label>
+        <input type="text" id="employment_type" name="employment_type" value="{{ candidate.employment_type }}"><br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Candidate</title>
+</head>
+<body>
+    <h1>Delete Candidate</h1>
+    <p>Are you sure you want to delete candidate "{{ candidate.Job_Title }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>
